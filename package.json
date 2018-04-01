@@ -1,0 +1,45 @@
+{
+  "name": "video-broadcast",
+  "version": "1.0.0",
+  "description": "Video broadcast",
+  "main": "index.js",
+  "scripts": {
+    "start": "./start.sh",
+    "server:dev": "webpack-dev-server",
+    "stats": "webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Demo",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "page": "^1.8.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.7",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.3",
+    "postcss-url": "^7.3.1",
+    "precss": "^3.1.2",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-chunk-hash": "^0.5.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
