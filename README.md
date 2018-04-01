@@ -1,4 +1,4 @@
-# Vnilla JS with webpack - starter pack
+# Vanilla JS with webpack - starter pack
 
 Basic packages and scripts to start app developing in vanilla js and webpack
 
