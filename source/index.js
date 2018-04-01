@@ -1,2 +1,2 @@
-import './views/AppRoot/AppRoot';
+import './components/AppRoot/AppRoot';
 
