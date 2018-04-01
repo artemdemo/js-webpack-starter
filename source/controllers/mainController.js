@@ -1,7 +1,9 @@
-import mainView from '../view/mainView';
+import * as $ from '../services/$';
 
-const mainController = () => {
-    return mainView();
+const mainController = (routeEl) => {
+    const divEl = document.createElement('div');
+    divEl.innerText = 'Main View';
+    $.replaceChildren(routeEl, divEl);
 };
 
 export default mainController;

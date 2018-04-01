@@ -1,7 +1,9 @@
-import secondView from '../view/secondView';
+import * as $ from '../services/$';
 
-const secondController = () => {
-    return secondView();
+const secondController = (routeEl) => {
+    const divEl = document.createElement('div');
+    divEl.innerText = 'Second View';
+    $.replaceChildren(routeEl, divEl);
 };
 
 export default secondController;

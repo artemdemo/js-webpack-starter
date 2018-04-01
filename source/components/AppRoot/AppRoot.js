@@ -1,5 +1,5 @@
-import MainMenu from '../MainMenu/MainMenu';
-import Router from '../Router/Router';
+import '../MainMenu/MainMenu';
+import '../Router/Router';
 
 import './AppRoot.pcss';
 
