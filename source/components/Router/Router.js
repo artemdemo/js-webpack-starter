@@ -8,6 +8,21 @@ import ItemController from '../../controllers/ItemController';
 import MainController from '../../controllers/MainController';
 import SecondController from '../../controllers/SecondController';
 
+const routesMap = [
+    {
+        path: '/',
+        Controller: MainController,
+    },
+    {
+        path: '/second',
+        Controller: SecondController,
+    },
+    {
+        path: '/items/:itemId',
+        Controller: ItemController,
+    }
+];
+
 export const routing = (() => {
     return {
         init(routeEl) {
@@ -17,17 +32,11 @@ export const routing = (() => {
                 next();
             });
 
-            const mainController = new MainController(routeEl);
-            page('/', mainController.routeEnter.bind(mainController));
-            page.exit('/', mainController.routeExit.bind(mainController));
-
-            const secondController = new SecondController(routeEl);
-            page('/second', secondController.routeEnter.bind(secondController));
-            page.exit('/second', secondController.routeExit.bind(mainController));
-
-            const itemController = new ItemController(routeEl);
-            page('/items/:itemId', itemController.routeEnter.bind(itemController));
-            page.exit('/items/:itemId', itemController.routeExit.bind(itemController));
+            routesMap.forEach((item) => {
+                const controller = new item.Controller(routeEl);
+                page(item.path, controller.routeEnter.bind(controller));
+                page.exit(item.path, controller.routeExit.bind(controller));
+            });
 
             page();
         },
