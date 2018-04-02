@@ -1,5 +1,5 @@
 import { render } from 'lit-html';
-import aboutView from '../view/aboutView';
+import aboutPage from '../pages/aboutPage';
 import BaseController from './BaseController';
 
 class AboutController extends BaseController {
@@ -8,7 +8,7 @@ class AboutController extends BaseController {
     };
 
     renderView() {
-        render(aboutView(), this.routeEl);
+        render(aboutPage(), this.routeEl);
     };
 }
 

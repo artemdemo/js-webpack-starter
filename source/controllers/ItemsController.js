@@ -1,5 +1,5 @@
 import { render } from 'lit-html';
-import itemsView from '../view/itemsView';
+import itemsView from '../pages/itemsPage';
 import BaseController from './BaseController';
 import store from '../store';
 

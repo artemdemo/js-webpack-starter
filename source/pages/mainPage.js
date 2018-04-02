@@ -4,7 +4,7 @@ import { counterAdd, counterSubtract } from '../model/counter/counterActions';
 
 const countView = (value) => html`<span>${value}</span>`;
 
-const mainView = (countValue) => {
+const mainPage = (countValue) => {
     const sub = () => {
         store.dispatch(counterSubtract());
     };
@@ -14,7 +14,7 @@ const mainView = (countValue) => {
     };
 
     return html`
-        <h4>Main View</h4>
+        <h4>Main Page</h4>
         <button
             type='button'
             class='btn btn-dark'
@@ -33,4 +33,4 @@ const mainView = (countValue) => {
     `;
 };
 
-export default mainView;
+export default mainPage;

@@ -1,6 +1,6 @@
 import { render } from 'lit-html';
 import store from '../store';
-import mainView from '../view/mainView';
+import mainPage from '../pages/mainPage';
 import BaseController from './BaseController';
 
 class MainController extends BaseController {
@@ -26,7 +26,7 @@ class MainController extends BaseController {
 
     renderView() {
         const { counter } = store.getState();
-        render(mainView(counter.value), this.routeEl);
+        render(mainPage(counter.value), this.routeEl);
     };
 }
 

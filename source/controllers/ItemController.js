@@ -1,6 +1,6 @@
 import { render } from 'lit-html';
 import store from '../store';
-import itemView from '../view/itemView';
+import itemPage from '../pages/itemPage';
 import BaseController from './BaseController';
 
 class ItemController extends BaseController {
@@ -27,7 +27,7 @@ class ItemController extends BaseController {
     renderView() {
         const { routing } = store.getState();
         const { params } = routing;
-        render(itemView(params.itemId), this.routeEl);
+        render(itemPage(params.itemId), this.routeEl);
     };
 }
 
