@@ -4,9 +4,9 @@ import * as nodes from '../../services/nodes';
 import { setRoutingCtx } from '../../model/routing/routingActions';
 import store from '../../store';
 
-import itemController from '../../controllers/itemController';
-import mainController from '../../controllers/mainController';
-import secondController from '../../controllers/secondController';
+import ItemController from '../../controllers/ItemController';
+import MainController from '../../controllers/MainController';
+import SecondController from '../../controllers/SecondController';
 
 export const routing = (() => {
     return {
@@ -16,9 +16,19 @@ export const routing = (() => {
                 store.dispatch(setRoutingCtx(ctx));
                 next();
             });
-            page('/', mainController.bind(null, routeEl));
-            page('/second', secondController.bind(null, routeEl));
-            page('/items/:itemId', itemController.bind(null, routeEl));
+
+            const mainController = new MainController(routeEl);
+            page('/', mainController.routeEnter.bind(mainController));
+            page.exit('/', mainController.routeExit.bind(mainController));
+
+            const secondController = new SecondController(routeEl);
+            page('/second', secondController.routeEnter.bind(secondController));
+            page.exit('/second', secondController.routeExit.bind(mainController));
+
+            const itemController = new ItemController(routeEl);
+            page('/items/:itemId', itemController.routeEnter.bind(itemController));
+            page.exit('/items/:itemId', itemController.routeExit.bind(itemController));
+
             page();
         },
     }

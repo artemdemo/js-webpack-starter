@@ -3,9 +3,10 @@
 Basic packages and scripts to start app developing in vanilla js and webpack
 
 ## Packages
-* bootstrap css
+* [bootstrap v.4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) styling
 * [page.js](https://www.npmjs.com/package/page) routing
 * [lit-html](https://github.com/Polymer/lit-html) template engine
+* [redux](https://redux.js.org/) data model
 * webpack
     - webpack-dev-server
 * postcss
