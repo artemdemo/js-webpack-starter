@@ -2,6 +2,8 @@ import { html } from 'lit-html/lib/lit-extended';
 import store from '../store';
 import { counterAdd, counterSubtract } from '../model/counter/counterActions';
 
+const countView = (value) => html`<span>${value}</span>`;
+
 const mainView = (countValue) => {
     const sub = () => {
         store.dispatch(counterSubtract());
@@ -20,7 +22,7 @@ const mainView = (countValue) => {
         >
             -
         </button>
-        <span>${countValue}</span>
+        ${countView(countValue)}
         <button
             type='button'
             class='btn btn-dark'

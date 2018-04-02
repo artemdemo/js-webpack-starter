@@ -4,9 +4,10 @@ import * as nodes from '../../services/nodes';
 import { setRoutingCtx } from '../../model/routing/routingActions';
 import store from '../../store';
 
+import AboutController from '../../controllers/AboutController';
 import ItemController from '../../controllers/ItemController';
+import ItemsController from '../../controllers/ItemsController';
 import MainController from '../../controllers/MainController';
-import SecondController from '../../controllers/SecondController';
 
 const routesMap = [
     {
@@ -14,8 +15,12 @@ const routesMap = [
         Controller: MainController,
     },
     {
-        path: '/second',
-        Controller: SecondController,
+        path: '/about',
+        Controller: AboutController,
+    },
+    {
+        path: '/items',
+        Controller: ItemsController,
     },
     {
         path: '/items/:itemId',
