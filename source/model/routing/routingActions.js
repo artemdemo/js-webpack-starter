@@ -1,8 +1,8 @@
-import * as routingCons from './routingConstants';
+import * as routingConst from './routingConstants';
 
 export function setRoutingCtx(data) {
     return {
-        type: routingCons.SET_ROUTING_CTX,
+        type: routingConst.SET_ROUTING_CTX,
         data,
     };
 }

@@ -1,13 +1,13 @@
-import * as counterCons from './counterConstants';
+import * as counterConst from './counterConstants';
 
 export function counterAdd() {
     return {
-        type: counterCons.COUNTER_ADD,
+        type: counterConst.COUNTER_ADD,
     };
 }
 
 export function counterSubtract() {
     return {
-        type: counterCons.COUNTER_SUBTRACT,
+        type: counterConst.COUNTER_SUBTRACT,
     };
 }
