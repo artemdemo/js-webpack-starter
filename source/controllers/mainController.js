@@ -1,9 +1,8 @@
-import * as $ from '../services/$';
+import { render } from 'lit-html';
+import mainView from '../view/mainView';
 
 const mainController = (routeEl) => {
-    const divEl = document.createElement('div');
-    divEl.innerText = 'Main View';
-    $.replaceChildren(routeEl, divEl);
+    render(mainView(), routeEl);
 };
 
 export default mainController;

@@ -1,9 +1,8 @@
-import * as $ from '../services/$';
+import { render } from 'lit-html';
+import secondView from '../view/secondView';
 
 const secondController = (routeEl) => {
-    const divEl = document.createElement('div');
-    divEl.innerText = 'Second View';
-    $.replaceChildren(routeEl, divEl);
+    render(secondView(), routeEl)
 };
 
 export default secondController;
