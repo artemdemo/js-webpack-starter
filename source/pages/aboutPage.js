@@ -1,4 +1,4 @@
-import { html } from 'lit-html';
+import { html } from 'lit-html/lib/lit-extended';
 
 const aboutPage = () => html`<h4>About</h4>`;
 

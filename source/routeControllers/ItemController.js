@@ -1,9 +1,9 @@
-import { render } from 'lit-html';
+import { render } from 'lit-html/lib/lit-extended';
 import store from '../store';
-import mainPage from '../pages/mainPage';
+import itemPage from '../pages/itemPage';
 import BaseController from './BaseController';
 
-class MainController extends BaseController {
+class ItemController extends BaseController {
     constructor(routeEl) {
         super();
         this.routeEl = routeEl;
@@ -25,9 +25,10 @@ class MainController extends BaseController {
     };
 
     renderView() {
-        const { counter } = store.getState();
-        render(mainPage(counter.value), this.routeEl);
+        const { routing } = store.getState();
+        const { params } = routing;
+        render(itemPage(params.itemId), this.routeEl);
     };
 }
 
-export default MainController;
+export default ItemController;

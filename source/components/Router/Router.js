@@ -4,10 +4,10 @@ import * as nodes from '../../services/nodes';
 import { setRoutingCtx } from '../../model/routing/routingActions';
 import store from '../../store';
 
-import AboutController from '../../controllers/AboutController';
-import ItemController from '../../controllers/ItemController';
-import ItemsController from '../../controllers/ItemsController';
-import MainController from '../../controllers/MainController';
+import AboutController from '../../routeControllers/AboutController';
+import ItemController from '../../routeControllers/ItemController';
+import ItemsController from '../../routeControllers/ItemsController';
+import MainController from '../../routeControllers/MainController';
 
 const routesMap = [
     {
@@ -54,4 +54,4 @@ class Router extends HTMLElement {
         routing.init(this);
     }
 }
-window.customElements.define('router-x', Router);
+window.customElements.define('app-router', Router);

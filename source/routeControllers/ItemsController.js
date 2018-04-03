@@ -1,4 +1,4 @@
-import { render } from 'lit-html';
+import { render } from 'lit-html/lib/lit-extended';
 import itemsView from '../pages/itemsPage';
 import BaseController from './BaseController';
 import store from '../store';
