@@ -13,7 +13,6 @@ const icon = (props) => {
     const { name, className } = props;
     const iconClass = classnames(className, `fa fa-${name}`);
     if (name) {
-        console.log(iconClass);
         return html`
             <span class$=${iconClass} />
         `;

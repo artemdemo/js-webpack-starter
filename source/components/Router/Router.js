@@ -8,6 +8,7 @@ import AboutController from '../../routeControllers/AboutController';
 import ItemController from '../../routeControllers/ItemController';
 import ItemsController from '../../routeControllers/ItemsController';
 import MainController from '../../routeControllers/MainController';
+import NotFoundController from '../../routeControllers/NotFoundController';
 
 const routesMap = [
     {
@@ -25,7 +26,11 @@ const routesMap = [
     {
         path: '/items/:itemId',
         Controller: ItemController,
-    }
+    },
+    {
+        path: '*',
+        Controller: NotFoundController,
+    },
 ];
 
 export const routing = (() => {

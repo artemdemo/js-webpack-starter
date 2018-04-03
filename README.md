@@ -11,6 +11,10 @@ Basic packages and scripts to start app developing in vanilla js and webpack
     - webpack-dev-server
 * postcss
 
+## ToDo
+
+* Mark menu item when route entered
+
 ## Getting started
 
 ```
