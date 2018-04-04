@@ -24,9 +24,7 @@ const menuMap = [
 
 const menuItemView = item => html`
     <li>
-        <a href$=${item.href}>
-            ${item.name}
-        </a>
+        <route-link href$=${item.href}>${item.name}</route-link>
     </li>
 `;
 
