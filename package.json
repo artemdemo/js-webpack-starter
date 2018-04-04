@@ -1,11 +1,12 @@
 {
-  "name": "video-broadcast",
+  "name": "js-webpack-starter",
   "version": "1.0.0",
-  "description": "Video broadcast",
+  "description": "Basic app without framework",
   "main": "index.js",
   "scripts": {
     "start": "./start.sh",
     "server:dev": "webpack-dev-server",
+    "server:prod": "echo \"Error: no server:prod specified\" && exit 1",
     "stats": "webpack --profile --json > bundle-stats.json && webpack-bundle-analyzer bundle-stats.json -p 8888 -r bundle-report.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
