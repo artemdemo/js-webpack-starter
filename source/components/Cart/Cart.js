@@ -1,4 +1,5 @@
 import { html, render } from 'lit-html/lib/lit-extended';
+import page from 'page';
 import classnames from 'classnames';
 import * as nodes from '../../services/nodes';
 import store from '../../store';
@@ -11,8 +12,9 @@ const cartView = (amount = 0) => {
         'cart-amount': true,
         'cart-amount_visible': amount > 0,
     });
+    const openCartPage = () => page('/cart');
     return html`
-        <div class='cart'>
+        <div class='cart' on-click=${openCartPage}>
             <div class$=${amountClass}>
                 <div class='cart-amount__number'>${amount}</div>
             </div>

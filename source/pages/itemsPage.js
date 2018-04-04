@@ -3,7 +3,7 @@ import { repeat } from 'lit-html/lib/repeat';
 import store from '../store';
 import { addToCart } from '../model/cart/cartActions';
 
-const singleItem = (item) => {
+const singleItemView = (item) => {
     const addItemToCart = (selectedItem) => {
         store.dispatch(addToCart(selectedItem));
     };
@@ -36,7 +36,7 @@ const itemsView = (items) => html`
         ${repeat(
             items,
             i => i.id,
-            singleItem
+            singleItemView
         )}
     </div>
 `;

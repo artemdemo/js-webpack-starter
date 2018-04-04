@@ -29,3 +29,15 @@ export const replaceChildren = (parentEl, childEl = null) => {
         parentEl.appendChild(childEl);
     }
 };
+
+/**
+ * Generate random id xxxxyyyy-xxxx-xxxx
+ * @returns {String}
+ */
+export const guid = () => {
+    const s4 = () => Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    // eslint-disable-next-line prefer-template
+    return s4() + s4() + '-' + s4() + '-' + s4();
+};

@@ -1,13 +1,44 @@
 import { html, render } from 'lit-html/lib/lit-extended';
+import { repeat } from 'lit-html/lib/repeat';
 import * as nodes from '../../services/nodes';
+import * as $ from '../../services/$';
+import * as url from '../../services/url';
+
+const menuMap = [
+    {
+        id: $.guid(),
+        href: url.format('/'),
+        name: 'Main',
+    },
+    {
+        id: $.guid(),
+        href: url.format('/items'),
+        name: 'Items',
+    },
+    {
+        id: $.guid(),
+        href: url.format('/about'),
+        name: 'About',
+    },
+];
+
+const menuItemView = item => html`
+    <li>
+        <a href$=${item.href}>
+            ${item.name}
+        </a>
+    </li>
+`;
 
 const mainMenuView = () => html`
     <div class="clearfix">
         <div class="float-left">
             <ul>
-                <li><a href='/'>Main</a></li>
-                <li><a href='/items'>Items</a>
-                <li><a href='/about'>About</a></li>
+                ${repeat(
+                    menuMap,
+                    i => i.id,
+                    menuItemView
+                )}
             </ul>
         </div>
         <div class="float-right">
