@@ -1,9 +1,9 @@
 import { render } from 'lit-html/lib/lit-extended';
-import itemsView from '../pages/itemsPage';
+import itemsView from '../pages/shopPage';
 import BaseController from './BaseController';
 import store from '../store';
 
-class ItemsController extends BaseController {
+class ShopController extends BaseController {
     routeEnter() {
         this.renderView();
     };
@@ -14,4 +14,4 @@ class ItemsController extends BaseController {
     };
 }
 
-export default ItemsController;
+export default ShopController;

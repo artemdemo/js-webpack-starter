@@ -30,8 +30,8 @@ const singleItemView = (item) => {
     `;
 };
 
-const itemsView = (items) => html`
-    <h4>Items</h4>
+const shopPage = (items) => html`
+    <h4>Shop</h4>
     <div class='row'>
         ${repeat(
             items,
@@ -41,4 +41,4 @@ const itemsView = (items) => html`
     </div>
 `;
 
-export default itemsView;
+export default shopPage;

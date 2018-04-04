@@ -1,6 +1,7 @@
 import { render } from 'lit-html/lib/lit-extended';
 import cartPage from '../pages/cartPage';
 import BaseController from './BaseController';
+import store from '../store';
 
 class CartController extends BaseController {
     routeEnter() {
@@ -8,7 +9,8 @@ class CartController extends BaseController {
     };
 
     renderView() {
-        render(cartPage(), this.routeEl);
+        const { cart } = store.getState();
+        render(cartPage(cart.data), this.routeEl);
     };
 }
 

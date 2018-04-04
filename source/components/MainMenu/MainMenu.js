@@ -2,22 +2,21 @@ import { html, render } from 'lit-html/lib/lit-extended';
 import { repeat } from 'lit-html/lib/repeat';
 import * as nodes from '../../services/nodes';
 import * as $ from '../../services/$';
-import * as url from '../../services/url';
 
 const menuMap = [
     {
         id: $.guid(),
-        href: url.format('/'),
+        href: '/',
         name: 'Main',
     },
     {
         id: $.guid(),
-        href: url.format('/items'),
-        name: 'Items',
+        href: '/shop',
+        name: 'Shop',
     },
     {
         id: $.guid(),
-        href: url.format('/about'),
+        href: '/about',
         name: 'About',
     },
 ];

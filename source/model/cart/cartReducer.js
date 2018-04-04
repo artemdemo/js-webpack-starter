@@ -1,4 +1,5 @@
 import * as cartConst from './cartConstants';
+import * as $ from '../../services/$';
 
 const initialState = {
     data: [],
@@ -10,12 +11,14 @@ export default function cartReducer(state = initialState, action) {
             return Object.assign({}, state, {
                 data: [
                     ...state.data,
-                    action.item,
+                    Object.assign({}, action.item, {
+                        cartId: $.guid(),
+                    }),
                 ],
             });
         case cartConst.REMOVE_FROM_CART:
             return Object.assign({}, state, {
-                data: state.data.filter(item => item.id !== action.id),
+                data: state.data.filter(item => item.cartId !== action.id),
             });
         default:
             return state;

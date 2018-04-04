@@ -8,7 +8,7 @@ import store from '../../store';
 import AboutController from '../../routeControllers/AboutController';
 import CartController from '../../routeControllers/CartController';
 import ItemController from '../../routeControllers/ItemController';
-import ItemsController from '../../routeControllers/ItemsController';
+import ShopController from '../../routeControllers/ShopController';
 import MainController from '../../routeControllers/MainController';
 import NotFoundController from '../../routeControllers/NotFoundController';
 
@@ -22,11 +22,11 @@ const routesMap = [
         Controller: AboutController,
     },
     {
-        path: '/items',
-        Controller: ItemsController,
+        path: '/shop',
+        Controller: ShopController,
     },
     {
-        path: '/items/:itemId',
+        path: '/shop/:itemId',
         Controller: ItemController,
     },
     {

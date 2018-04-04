@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import * as $ from '../../services/$';
+import * as url from '../../services/url';
 import store from '../../store';
 
 import './RouteLink.pcss';
@@ -47,7 +48,7 @@ class RouteLink extends HTMLElement {
     connectedCallback() {
         this.storeUnsubscribe = store.subscribe(this.onStoreChange);
         this.aEl = document.createElement('a');
-        this.aEl.setAttribute('href', this.getAttribute('href'));
+        this.aEl.setAttribute('href', url.format(this.getAttribute('href')));
         this.updateClassName();
         this.aEl.innerHTML = this.innerHTML;
         $.replaceChildren(this, this.aEl);
