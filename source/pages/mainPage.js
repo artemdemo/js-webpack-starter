@@ -30,8 +30,6 @@ const mainPage = (countValue) => {
         >
             +
         </button>
-        <p>&nbsp;</p>
-        <app-cart></app-cart>
     `;
 };
 

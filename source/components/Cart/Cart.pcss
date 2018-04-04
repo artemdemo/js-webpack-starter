@@ -1,3 +1,30 @@
 .cart {
-    font-size: 40px;
+    position: relative;
+    display: inline-block;
 }
+    .cart__icon {
+        font-size: 33px;
+    }
+
+.cart-amount {
+    display: none;
+    position: absolute;
+    background: var(--pink);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    right: -6px;
+    top: 0;
+}
+    .cart-amount_visible {
+        display: block;
+    }
+    .cart-amount__number {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        color: white;
+    }

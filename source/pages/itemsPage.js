@@ -1,9 +1,11 @@
 import { html } from 'lit-html/lib/lit-extended';
 import { repeat } from 'lit-html/lib/repeat';
+import store from '../store';
+import { addToCart } from '../model/cart/cartActions';
 
 const singleItem = (item) => {
     const addItemToCart = (selectedItem) => {
-        console.log('add to cart', selectedItem);
+        store.dispatch(addToCart(selectedItem));
     };
     return html`
         <div class='col-md-4'>
