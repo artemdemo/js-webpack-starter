@@ -12,7 +12,7 @@ const singleItemView = (item) => {
             <div class='card'>    
                 <div class='card-body'>
                     <h5 class='card-title'>
-                        <a href='/items/${item.id}'>${item.name}</a>
+                        <a href='/shop/${item.id}'>${item.name}</a>
                     </h5>
                     <p class='card-text'>
                         ${item.description}
